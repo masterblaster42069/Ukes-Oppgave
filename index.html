@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="c"></canvas>
+    
+    <h1 style="color:bisque">Hei, Velkommen til min nettside</h1>
+
+    <div><i>Jeg heter Sindre og jeg er 20 år gammel, Snart 21 :)</i></div>
+    <div onclick="openlist()"><strong>Her har jeg en liste over hobbyene mine. Trykk på teksten :)</strong></div>
+    <div id="myList">
+     
+</div>
+
+    <div onclick="showimage()" ><strong>her har jeg et bilde, det er ikke meg da. Trykk på teksten :)</strong></div>
+    <div id="image">
+
+    </div>
+
+    
+
+     <br>
+
+     <br>
+
+    <button onclick="changecolor()">change to cyan</button>
+
+    <button onclick="reverse()">go back to gray</button>
+
+    <button onclick="changeheader1()">change h1 color</button>
+    
+    <button onclick="changeheader2()">change it back</button>
+
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1d1d1d;
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: bisque;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        i {
+            color: #f0c040;
+        }
+
+        strong {
+            color: white;
+            cursor: pointer;
+        }
+
+        div {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #f0c040;
+            color: black;
+            font-size: 18px;
+            border: none;
+            padding: 8px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffdb75;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+
+    </style>
+
+    <script>
+
+    function showimage(){
+        document.getElementById("image").innerHTML=/*HTMl*/` 
+        <div class="image">
+        <img src="img/bubbles.png">
+    </div>`
+    }    
+
+
+    function openlist(){
+        var x = document.getElementById("myList").innerHTML = /*HTML*/`     
+        <div class="list">
+    <ul>
+        <li>Gaming</li>
+        <li>Jakting</li>
+        <li>Fisking</li>
+    </ul>IKKE NOE MER <img src="img/maxresdefault.jpg"/>
+    </div>`
+    }
+
+    function changecolor() {
+        document.body.style.backgroundColor = "cyan";
+    }
+
+    function reverse() {
+        document.body.style.backgroundColor = "gray";
+    }
+
+    function changeheader1() {
+        document.getElementsByTagName("h1")[0].style.color = "white";
+    }
+
+    function changeheader2() {
+        document.getElementsByTagName("h1")[0].style.color = "bisque";
+    }
+
+    </script>
+</body>
+</html>
